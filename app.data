@@ -1,0 +1,629 @@
+{
+  "CoolSupplies": {
+    "admin": {
+      "email": "admin@cool.ca",
+      "password": "Pwd#",
+      "canSetEmail": false,
+      "coolSupplies": {
+        "@reference": "../.."
+      }
+    },
+    "students": [
+      {
+        "Student": [
+          {
+            "name": "Jeremy",
+            "coolSupplies": {
+              "@reference": "../../.."
+            },
+            "parent": {
+              "email": "mom@gmail.com",
+              "password": 1234,
+              "canSetEmail": false,
+              "name": "Anna",
+              "phoneNumber": 1234567,
+              "students": [
+                {
+                  "Student": [
+                    {
+                      "@reference": "../../.."
+                    },
+                    {
+                      "name": "Jane",
+                      "coolSupplies": {
+                        "@reference": "../../../../../.."
+                      },
+                      "parent": {
+                        "@reference": "../../.."
+                      },
+                      "orders": [
+                        {
+                          "Order": {
+                            "number": 1,
+                            "date": "2024-11-05",
+                            "level": "Mandatory",
+                            "status": "Started",
+                            "parent": {
+                              "@reference": "../../../../.."
+                            },
+                            "student": {
+                              "@reference": "../../.."
+                            },
+                            "coolSupplies": {
+                              "@reference": "../../../../../../../.."
+                            },
+                            "orderItems": [
+                              {
+                                "OrderItem": [
+                                  {
+                                    "quantity": 1,
+                                    "coolSupplies": {
+                                      "@reference": "../../../../../../../../../.."
+                                    },
+                                    "order": {
+                                      "@reference": "../../.."
+                                    },
+                                    "item": {
+                                      "@class": "GradeBundle",
+                                      "name": "B6",
+                                      "orderItems": [
+                                        {
+                                          "OrderItem": {
+                                            "@reference": "../../.."
+                                          }
+                                        }
+                                      ],
+                                      "discount": 30,
+                                      "coolSupplies": {
+                                        "@reference": "../../../../../../../../../../.."
+                                      },
+                                      "grade": {
+                                        "level": "6th",
+                                        "bundle": {
+                                          "@reference": "../.."
+                                        },
+                                        "students": [
+                                          {
+                                            "Student": {
+                                              "@reference": "../../../../../../../.."
+                                            }
+                                          }
+                                        ],
+                                        "coolSupplies": {
+                                          "@reference": "../../../../../../../../../../../.."
+                                        }
+                                      },
+                                      "bundleItems": [
+                                        {
+                                          "BundleItem": [
+                                            {
+                                              "quantity": 1,
+                                              "level": "Recommended",
+                                              "coolSupplies": {
+                                                "@reference": "../../../../../../../../../../../../.."
+                                              },
+                                              "bundle": {
+                                                "@reference": "../../.."
+                                              },
+                                              "item": {
+                                                "name": "notebook",
+                                                "orderItems": [
+                                                  ""
+                                                ],
+                                                "price": 10,
+                                                "coolSupplies": {
+                                                  "@reference": "../../../../../../../../../../../../../.."
+                                                },
+                                                "bundleItems": [
+                                                  {
+                                                    "BundleItem": [
+                                                      {
+                                                        "quantity": 2,
+                                                        "level": "Mandatory",
+                                                        "coolSupplies": {
+                                                          "@reference": "../../../../../../../../../../../../../../../.."
+                                                        },
+                                                        "bundle": {
+                                                          "name": "B7",
+                                                          "orderItems": [
+                                                            ""
+                                                          ],
+                                                          "discount": 10,
+                                                          "coolSupplies": {
+                                                            "@reference": "../../../../../../../../../../../../../../../../.."
+                                                          },
+                                                          "grade": {
+                                                            "level": "7th",
+                                                            "bundle": {
+                                                              "@reference": "../.."
+                                                            },
+                                                            "students": [
+                                                              {
+                                                                "Student": [
+                                                                  {
+                                                                    "name": "Luke",
+                                                                    "coolSupplies": {
+                                                                      "@reference": "../../../../../../../../../../../../../../../../../../../.."
+                                                                    },
+                                                                    "orders": [
+                                                                      ""
+                                                                    ],
+                                                                    "grade": {
+                                                                      "@reference": "../../.."
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "name": "Janice",
+                                                                    "coolSupplies": {
+                                                                      "@reference": "../../../../../../../../../../../../../../../../../../../.."
+                                                                    },
+                                                                    "parent": {
+                                                                      "email": "dad@gmail.com",
+                                                                      "password": 4321,
+                                                                      "canSetEmail": false,
+                                                                      "name": "Bob",
+                                                                      "phoneNumber": 7654321,
+                                                                      "students": [
+                                                                        {
+                                                                          "Student": {
+                                                                            "@reference": "../../.."
+                                                                          }
+                                                                        }
+                                                                      ],
+                                                                      "coolSupplies": {
+                                                                        "@reference": "../../../../../../../../../../../../../../../../../../../../.."
+                                                                      },
+                                                                      "orders": [
+                                                                        ""
+                                                                      ]
+                                                                    },
+                                                                    "orders": [
+                                                                      ""
+                                                                    ],
+                                                                    "grade": {
+                                                                      "@reference": "../../.."
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "coolSupplies": {
+                                                              "@reference": "../../../../../../../../../../../../../../../../../.."
+                                                            }
+                                                          },
+                                                          "bundleItems": [
+                                                            {
+                                                              "BundleItem": [
+                                                                {
+                                                                  "@reference": "../../.."
+                                                                },
+                                                                {
+                                                                  "quantity": 3,
+                                                                  "level": "Optional",
+                                                                  "coolSupplies": {
+                                                                    "@reference": "../../../../../../../../../../../../../../../../../../.."
+                                                                  },
+                                                                  "bundle": {
+                                                                    "@reference": "../../.."
+                                                                  },
+                                                                  "item": {
+                                                                    "name": "pen",
+                                                                    "orderItems": [
+                                                                      {
+                                                                        "OrderItem": {
+                                                                          "quantity": 3,
+                                                                          "coolSupplies": {
+                                                                            "@reference": "../../../../../../../../../../../../../../../../../../../../../.."
+                                                                          },
+                                                                          "order": {
+                                                                            "@reference": "../../../../../../../../../../../../../../.."
+                                                                          },
+                                                                          "item": {
+                                                                            "@class": "Item",
+                                                                            "@reference": "../../.."
+                                                                          },
+                                                                          "cachedHashCode": -1,
+                                                                          "canSetOrder": true,
+                                                                          "canSetItem": true
+                                                                        }
+                                                                      }
+                                                                    ],
+                                                                    "price": 4,
+                                                                    "coolSupplies": {
+                                                                      "@reference": "../../../../../../../../../../../../../../../../../../../.."
+                                                                    },
+                                                                    "bundleItems": [
+                                                                      {
+                                                                        "BundleItem": [
+                                                                          {
+                                                                            "@reference": "../../.."
+                                                                          },
+                                                                          {
+                                                                            "quantity": 1,
+                                                                            "level": "Optional",
+                                                                            "coolSupplies": {
+                                                                              "@reference": "../../../../../../../../../../../../../../../../../../../../../.."
+                                                                            },
+                                                                            "bundle": {
+                                                                              "@reference": "../../../../../../../../../../../.."
+                                                                            },
+                                                                            "item": {
+                                                                              "@reference": "../../.."
+                                                                            },
+                                                                            "cachedHashCode": -1,
+                                                                            "canSetBundle": true,
+                                                                            "canSetItem": true
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "cachedHashCode": -1,
+                                                                  "canSetBundle": true,
+                                                                  "canSetItem": true
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item": {
+                                                          "@reference": "../../.."
+                                                        },
+                                                        "cachedHashCode": -1,
+                                                        "canSetBundle": true,
+                                                        "canSetItem": true
+                                                      },
+                                                      {
+                                                        "@reference": "../../.."
+                                                      },
+                                                      {
+                                                        "quantity": 1,
+                                                        "level": "Optional",
+                                                        "coolSupplies": {
+                                                          "@reference": "../../../../../../../../../../../../../../../.."
+                                                        },
+                                                        "bundle": {
+                                                          "name": "B5",
+                                                          "orderItems": [
+                                                            ""
+                                                          ],
+                                                          "discount": 20,
+                                                          "coolSupplies": {
+                                                            "@reference": "../../../../../../../../../../../../../../../../.."
+                                                          },
+                                                          "grade": {
+                                                            "level": "5th",
+                                                            "bundle": {
+                                                              "@reference": "../.."
+                                                            },
+                                                            "students": [
+                                                              {
+                                                                "Student": {
+                                                                  "@reference": "../../../../../../../../../../../../../../../../.."
+                                                                }
+                                                              }
+                                                            ],
+                                                            "coolSupplies": {
+                                                              "@reference": "../../../../../../../../../../../../../../../../../.."
+                                                            }
+                                                          },
+                                                          "bundleItems": [
+                                                            {
+                                                              "BundleItem": [
+                                                                {
+                                                                  "@reference": "../../.."
+                                                                },
+                                                                {
+                                                                  "quantity": 1,
+                                                                  "level": "Recommended",
+                                                                  "coolSupplies": {
+                                                                    "@reference": "../../../../../../../../../../../../../../../../../../.."
+                                                                  },
+                                                                  "bundle": {
+                                                                    "@reference": "../../.."
+                                                                  },
+                                                                  "item": {
+                                                                    "name": "ruler",
+                                                                    "orderItems": [
+                                                                      ""
+                                                                    ],
+                                                                    "price": 8,
+                                                                    "coolSupplies": {
+                                                                      "@reference": "../../../../../../../../../../../../../../../../../../../.."
+                                                                    },
+                                                                    "bundleItems": [
+                                                                      {
+                                                                        "BundleItem": {
+                                                                          "@reference": "../../.."
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  "cachedHashCode": -1,
+                                                                  "canSetBundle": true,
+                                                                  "canSetItem": true
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        "item": {
+                                                          "@reference": "../../.."
+                                                        },
+                                                        "cachedHashCode": -1,
+                                                        "canSetBundle": true,
+                                                        "canSetItem": true
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              "cachedHashCode": -1,
+                                              "canSetBundle": true,
+                                              "canSetItem": true
+                                            },
+                                            {
+                                              "@reference": "../BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]/item/bundleItems/BundleItem[2]"
+                                            },
+                                            {
+                                              "quantity": 1,
+                                              "level": "Mandatory",
+                                              "coolSupplies": {
+                                                "@reference": "../../../../../../../../../../../../.."
+                                              },
+                                              "bundle": {
+                                                "@reference": "../../.."
+                                              },
+                                              "item": {
+                                                "name": "calculator",
+                                                "orderItems": [
+                                                  ""
+                                                ],
+                                                "price": 60,
+                                                "coolSupplies": {
+                                                  "@reference": "../../../../../../../../../../../../../.."
+                                                },
+                                                "bundleItems": [
+                                                  {
+                                                    "BundleItem": {
+                                                      "@reference": "../../.."
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "cachedHashCode": -1,
+                                              "canSetBundle": true,
+                                              "canSetItem": true
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    "cachedHashCode": -1,
+                                    "canSetOrder": true,
+                                    "canSetItem": true
+                                  },
+                                  {
+                                    "@reference": "../OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]/item/orderItems/OrderItem"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "grade": {
+                        "@reference": "../orders/Order/orderItems/OrderItem/item/grade"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "coolSupplies": {
+                "@reference": "../../../.."
+              },
+              "orders": [
+                {
+                  "Order": [
+                    {
+                      "@reference": "../../students/Student[2]/orders/Order"
+                    },
+                    {
+                      "number": 2,
+                      "date": "2024-11-05",
+                      "level": "Optional",
+                      "status": "Started",
+                      "parent": {
+                        "@reference": "../../.."
+                      },
+                      "student": {
+                        "@reference": "../../../.."
+                      },
+                      "coolSupplies": {
+                        "@reference": "../../../../../.."
+                      },
+                      "orderItems": [
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "orders": [
+              {
+                "Order": {
+                  "@reference": "../../parent/orders/Order[2]"
+                }
+              }
+            ],
+            "grade": {
+              "@reference": "../parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]/bundle/grade"
+            }
+          },
+          {
+            "@reference": "../Student/parent/students/Student[2]"
+          },
+          {
+            "@reference": "../Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/grade/students/Student"
+          },
+          {
+            "@reference": "../Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/grade/students/Student[2]"
+          }
+        ]
+      }
+    ],
+    "parents": [
+      {
+        "Parent": [
+          {
+            "@reference": "../../students/Student/parent"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/grade/students/Student[2]/parent"
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "Item": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]/item"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem[3]/item"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]/bundle/bundleItems/BundleItem[2]/item"
+          },
+          {
+            "name": "Jeff",
+            "orderItems": [
+              ""
+            ],
+            "price": 21,
+            "coolSupplies": {
+              "@reference": "../../.."
+            },
+            "bundleItems": [
+              ""
+            ]
+          }
+        ]
+      }
+    ],
+    "bundles": [
+      {
+        "GradeBundle": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]/bundle"
+          },
+          {
+            "name": "B8",
+            "orderItems": [
+              ""
+            ],
+            "discount": 10,
+            "coolSupplies": {
+              "@reference": "../../.."
+            },
+            "grade": {
+              "level": "8th",
+              "bundle": {
+                "@reference": "../.."
+              },
+              "students": [
+                ""
+              ],
+              "coolSupplies": {
+                "@reference": "../../../.."
+              }
+            },
+            "bundleItems": [
+              ""
+            ]
+          }
+        ]
+      }
+    ],
+    "bundleItems": [
+      {
+        "BundleItem": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]/item/bundleItems/BundleItem[2]"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem[3]"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]/bundle/bundleItems/BundleItem[2]"
+          }
+        ]
+      }
+    ],
+    "orders": [
+      {
+        "Order": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order"
+          },
+          {
+            "@reference": "../../students/Student/parent/orders/Order[2]"
+          }
+        ]
+      }
+    ],
+    "orderItems": [
+      {
+        "OrderItem": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/bundleItems/BundleItem[2]/item/orderItems/OrderItem"
+          }
+        ]
+      }
+    ],
+    "grades": [
+      {
+        "Grade": [
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem[3]/bundle/grade"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/grade"
+          },
+          {
+            "@reference": "../../students/Student/parent/students/Student[2]/orders/Order/orderItems/OrderItem/item/bundleItems/BundleItem/item/bundleItems/BundleItem/bundle/grade"
+          },
+          {
+            "@reference": "../../bundles/GradeBundle[4]/grade"
+          }
+        ]
+      }
+    ]
+  }
+}
