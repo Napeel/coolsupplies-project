@@ -1,0 +1,60 @@
+class CoolSupplies {
+  public void reinitialize() {
+    User.reinitializeUniqueEmail(this.getAdmin(), this.getParents());
+    Student.reinitializeUniqueName(this.getStudents());
+    Order.reinitializeUniqueNumber(this.getOrders());
+    InventoryItem.reinitializeUniqueName(this.getItems(), this.getBundles());
+    Grade.reinitializeUniqueLevel(this.getGrades());
+  }
+}
+
+class User {
+  public static void reinitializeUniqueEmail(SchoolAdmin admin, List<Parent> parents) {
+    usersByEmail = new HashMap<String, User>();
+    if (admin != null) {
+      usersByEmail.put(admin.getEmail(), admin);
+    }
+    for (Parent p : parents) {
+      usersByEmail.put(p.getEmail(), p);
+    }
+  }
+}
+
+class Student {
+  public static void reinitializeUniqueName(List<Student> students) {
+    studentsByName = new HashMap<String, Student>();
+    for (Student s : students) {
+      studentsByName.put(s.getName(), s);
+    }
+  }
+}
+
+class Order {
+  public static void reinitializeUniqueNumber(List<Order> orders) {
+    ordersByNumber = new HashMap<Integer, Order>();
+    for (Order o : orders) {
+      ordersByNumber.put(o.getNumber(), o);
+    }
+  }
+}
+
+class InventoryItem {
+  public static void reinitializeUniqueName(List<Item> items, List<GradeBundle> bundles) {
+    inventoryitemsByName = new HashMap<String, InventoryItem>();
+    for (Item i : items) {
+      inventoryitemsByName.put(i.getName(), i);
+    }
+    for (GradeBundle b : bundles) {
+      inventoryitemsByName.put(b.getName(), b);
+    }
+  }
+}
+
+class Grade {
+  public static void reinitializeUniqueLevel(List<Grade> grades) {
+    gradesByLevel = new HashMap<String, Grade>();
+    for (Grade g : grades) {
+      gradesByLevel.put(g.getLevel(), g);
+    }
+  }
+}

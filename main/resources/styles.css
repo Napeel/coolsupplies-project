@@ -1,0 +1,103 @@
+/* General Styling */
+.root {
+    -fx-background-color: #02353C; /* Background color */
+    -fx-font-family: 'Arial', sans-serif;
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: #2EAF7D; /* Primary color */
+    -fx-text-fill: white; /* Text color */
+    -fx-border-color: transparent;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 1 2;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #3D7F3B; /* Secondary color on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #AF732E; /* Edit color on press */
+}
+
+/* TextField Styling */
+.text-field {
+    -fx-background-color: white;
+    -fx-text-fill: #02353C; /* Dark text color */
+    -fx-background-radius: 5px;
+    -fx-padding: 5;
+}
+
+.text-field:focused {
+    -fx-border-color: #3D7F3B; /* Secondary color when focused */
+    -fx-border-width: 2px;
+}
+
+/* Label Styling */
+.label {
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* Checkbox Styling */
+.check-box {
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* TabPane Styling */
+.tab-pane {
+    -fx-tab-min-width: 80px;
+    -fx-tab-max-width: 200px;
+    -fx-background-color: transparent; /* Match root background */
+}
+
+.tab {
+    -fx-background-color: #3D7F3B; /* Secondary color */
+    -fx-text-fill: white;
+    -fx-border-color: #2EAF7D; /* Primary border */
+    -fx-border-radius: 5px;
+}
+
+.tab:selected {
+    -fx-background-color: #2EAF7D; /* Primary color for selected tab */
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+/* Styling for specific buttons */
+.button.edit {
+    -fx-background-color: #AF732E; /* Edit color */
+    -fx-text-fill: white;
+}
+
+.button.delete {
+    -fx-background-color: #AF2E2E; /* Delete color */
+    -fx-text-fill: white;
+}
+
+.button.edit:hover {
+    -fx-background-color: #3D7F3B; /* Secondary color on hover */
+}
+
+.button.delete:hover {
+    -fx-background-color: #AF732E; /* Edit color on hover */
+}
+
+/* Apply styling to the dropdown list items */
+.combo-box .list-cell {
+    -fx-background-color: white ; /* Background of each item */
+    -fx-text-fill: black; /* Text color */
+}
+
+
+/* Optional: Style the Tab header area */
+.tab-header-background {
+    -fx-background-color: #3D7F3B; /* Gradient */
+}

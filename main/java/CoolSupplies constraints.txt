@@ -1,0 +1,96 @@
+for each User:
+   // unique email already captured by unique keyword in Umple
+
+   // email must not contain any spaces
+   not email.contains(" ")
+
+   // email must contain some characters (anything is allowed except @), a @, some characters, a dot, and some characters
+   // this is a simplified check sufficient for this application
+   email.indexOf("@") > 0 // index starts at zero
+   email.indexOf("@") = email.lastIndexOf("@")
+   email.indexOf("@") < email.lastIndexOf(".") - 1
+   email.lastIndexOf(".") < email.length() - 1
+
+   // email cannot be admin@cool.ca unless it is for the admin
+   (not (self instanceof SchoolAdmin)) implies (email <> "admin@cool.ca")
+
+for each SchoolAdmin:
+   // email has to be admin@cool.ca
+   email = "admin@cool.ca"
+
+   // password must be at least four characters long
+   password.length() > 3
+   // password must contain a special character out of !#$
+   password.contains("!") or password.contains("#") or password.contains("$")
+   // password must contain an upper case character
+   there exists a character c in password such that Character.isUpperCase(c) = true
+   // password must contain a lower case character
+   there exists a character c in password such that Character.isLowerCase(c) = true
+
+for each Parent:
+   // name must not be empty or null
+   name <> ""
+   name <> null
+
+   // phoneNumber must be 7 digits and not have any leading 0s
+   phoneNumber > 999999
+   phoneNubmer < 10000000
+
+   // password must not be empty or null
+   password <> ""
+   password <> null
+
+for each Student:
+   // unique name already captured by unique keyword in Umple
+
+   // name must not be empty or null
+   name <> ""
+   name <> null
+
+for each Order:
+   // unique number already captured by unique keyword in Umple
+
+   // number must be greater than zero
+   number > 0
+
+   // the following constraints do not need to be considered for the first and second iteration
+   // authorizationCode and penaltyAuthorizationCode must be four characters long
+   authorizationCode.length() = 4
+   penaltyAuthorizationCode.length() = 4
+
+   // a bundle may only be ordered if it contains at least one bundle item
+   for all i in orderItems it is true that (i instanceof GradeBundle) implies (((GradeBundle) i).hasBundleItems())
+
+for each OrderItem:
+   // quantity must be greater than zero
+   quantity > 0
+
+for each InventoryItem:
+   // unique name already captured by unique keyword in Umple   
+
+   // name must not be empty or null
+   name <> ""
+   name <> null
+
+for each Item:
+   // price must be greater than or equal to zero
+   price >= 0
+
+for each GradeBundle:
+   // discount must be greater than or equal to zero and less than or equal to 100
+   discount >= 0
+   discount <= 100
+
+   // if a bundle contains less than two items, then the discount must be 0
+   (bundleItems.size() < 2) implies discount = 0
+
+for each BundleItem:
+   // quantity must be greater than zero
+   quantity > 0
+
+for each Grade:
+   // unique level already captured by unique keyword in Umple   
+
+   // level must not be empty or null
+   level <> ""
+   level <> null

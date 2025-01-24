@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ExpansionPanel?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Admin">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Parents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Students">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="System Items">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Orders">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ExpansionPanel layoutX="138.0" layoutY="72.0" />
+                        <Label layoutX="92.0" layoutY="51.0" prefHeight="43.0" prefWidth="375.0" text="Update Order">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="92.0" layoutY="131.0" prefWidth="150.0" />
+                        <Label layoutX="92.0" layoutY="97.0" text="Purchase Level">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="92.0" layoutY="205.0" prefWidth="150.0" />
+                        <Label layoutX="92.0" layoutY="171.0" text="Student">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="92.0" layoutY="250.0" mnemonicParsing="false" text="Save" />
+                        <Button layoutX="150.0" layoutY="250.0" mnemonicParsing="false" text="View All Orders" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

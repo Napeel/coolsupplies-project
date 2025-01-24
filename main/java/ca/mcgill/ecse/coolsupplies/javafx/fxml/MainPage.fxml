@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.MainPagecontroller">
+   <children>
+      <TabPane fx:id="mainTabPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Admin">
+               <content>
+                  <fx:include source="pages/AdminPage.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Parents">
+               <content>
+                  <fx:include source="pages/ManageParents.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Students">
+               <content>
+                  <fx:include source="pages/ManageStudents.fxml" />
+               </content>
+            </Tab>
+            <Tab text="System Items">
+               <content>
+                  <TabPane tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab fx:id="modifySystemItemsTab" text="System Items">
+                           <content>
+                              <fx:include source="pages/ManageSystemItems.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="manageBundlesTab" text="Manage Bundles">
+                           <content> 
+                              <fx:include source="pages/ManageBundles.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="manageBundleItemsTab" text="Manage Bundle Items">
+                           <content>
+                              <fx:include source="pages/ManageBundleItems.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab fx:id="addItemToBundleTab" text="Add to Bundles">
+                           <content>
+                              <fx:include source="pages/AddItemToBundle.fxml" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab text="Orders">
+               <content>
+                  <TabPane tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Start Order">
+                           <content>
+                              <fx:include source="pages/StartAnOrder.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Pick Up Order">
+                           <content>
+                              <fx:include source="pages/PickUpAnOrder.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Payment Order">
+                           <content>
+                              <fx:include source="pages/PaymentOrder.fxml" />
+                           </content>
+                        </Tab>
+                        <Tab text="Modify Order">
+                           <content>
+                              <fx:include source="pages/ModifyOrder.fxml" />
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab text="Student-Parent">
+               <content>
+                  <fx:include source="pages/ManageStudentParent.fxml" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

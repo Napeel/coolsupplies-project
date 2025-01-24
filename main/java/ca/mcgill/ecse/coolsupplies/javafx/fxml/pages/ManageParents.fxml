@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.controllers.ManageParentsController">
+    <children>
+        <Label layoutX="92.0" layoutY="14.0" prefHeight="43.0" prefWidth="375.0" text="Manage Parents">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailField" layoutX="92.0" layoutY="131.0" promptText="Email" />
+        <TextField fx:id="passwordField" layoutX="92.0" layoutY="171.0" promptText="Password" />
+        <TextField fx:id="nameField" layoutX="92.0" layoutY="211.0" promptText="Name" />
+        <TextField fx:id="phoneNumberField" layoutX="92.0" layoutY="251.0" promptText="Phone Number" />
+        <Button fx:id="addButton" layoutX="92.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleAddParent" text="Add Parent" />
+        <Button fx:id="updateButton" layoutX="188.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleUpdateParent" text="Update Parent" />
+        <Button fx:id="deleteButton" layoutX="306.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleDeleteParent" text="Delete Parent" />
+        <Button fx:id="clearButton" layoutX="410.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+        <Label layoutX="92.0" layoutY="71.0" text="Select Parent">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="viewAllParentsButton" layoutX="293.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleViewAllParents" text="View All Parents" />
+      <ComboBox fx:id="parentComboBox" layoutX="92.0" layoutY="91.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

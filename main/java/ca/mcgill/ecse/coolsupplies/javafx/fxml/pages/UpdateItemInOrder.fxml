@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ExpansionPanel?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.controllers.ManageOrderItemController.java">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Admin">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Parents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Students">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="System Items">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Orders">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ExpansionPanel layoutX="138.0" layoutY="72.0" />
+                        <Label layoutX="60.0" layoutY="28.0" prefHeight="43.0" prefWidth="375.0" text="Update Order Item">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox layoutX="82.0" layoutY="115.0" prefWidth="150.0" />
+                        <Label layoutX="92.0" layoutY="156.0" text="Item">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="309.0" layoutY="156.0" text="Quantity">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="92.0" layoutY="267.0" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="pressViewAllOrders" layoutX="355.0" layoutY="267.0" mnemonicParsing="false" text="View All Orders" />
+                        <Button layoutX="162.0" layoutY="267.0" mnemonicParsing="false" text="Delete" />
+                        <Button layoutX="232.0" layoutY="267.0" mnemonicParsing="false" text="Add" />
+                        <TextField layoutX="309.0" layoutY="201.0" text="Enter Quantity" />
+                        <ChoiceBox layoutX="82.0" layoutY="200.0" prefWidth="150.0" />
+                        <Label layoutX="92.0" layoutY="76.0" text="Order">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="309.0" layoutY="113.0" mnemonicParsing="false" text="Clear" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

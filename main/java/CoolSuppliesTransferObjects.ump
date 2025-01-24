@@ -1,0 +1,64 @@
+namespace ca.mcgill.ecse.coolsupplies.controller;
+
+class TOParent {
+   immutable;
+   String email;
+   String password;
+   String name;
+   Integer phoneNumber;
+}
+
+class TOStudent {
+   immutable;
+   String name;
+   String gradeLevel;
+}
+
+class TOItem {
+   immutable;
+   String name;
+   Integer price;
+}
+
+class TOGradeBundle {
+   immutable;
+   String name;
+   Integer discount;
+   String gradeLevel;
+}
+
+class TOBundleItem {
+   immutable;
+   Integer quantity;
+   String level;
+   String itemName;
+   String gradeBundleName;
+}
+
+class TOGrade {
+   immutable;
+   String level;
+}
+
+class TOOrder {
+   immutable;
+   String parentEmail;
+   String studentName;
+   String status;
+   Integer number;
+   Date date;
+   String level;
+   String authorizationCode;
+   String penaltyAuthorizationCode;
+   Double totalPrice;
+   1 -> * TOOrderItem TOOrderItems;
+}
+
+class TOOrderItem {
+   immutable;
+   Integer quantity;
+   String itemName;
+   String gradeBundleName;
+   Double price;
+   Double discountDeducted;
+}

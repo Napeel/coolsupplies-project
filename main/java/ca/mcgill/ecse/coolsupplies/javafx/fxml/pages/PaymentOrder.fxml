@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.controllers.PaymentOrderController">
+   <children>
+      <Label layoutX="179.0" layoutY="51.0" prefHeight="43.0" prefWidth="242.0" text="Payment Order" textAlignment="CENTER">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="179.0" layoutY="94.0" text="Select an order to pay for:" />
+      <ComboBox fx:id="ordersBox" layoutX="179.0" layoutY="116.0" prefHeight="25.0" prefWidth="242.0" />
+      <Label layoutX="179.0" layoutY="150.0" text="Authorization Code:" />
+      <TextField fx:id="authCodeField" layoutX="179.0" layoutY="172.0" prefHeight="25.0" prefWidth="242.0" />
+      <Label layoutX="179.0" layoutY="206.0" text="Penalty Authorization Code (if applicable):" />
+      <TextField fx:id="penaltyAuthCodeField" layoutX="179.0" layoutY="228.0" prefHeight="25.0" prefWidth="242.0" />
+      <Button fx:id="payOrderButton" layoutX="179.0" layoutY="270.0" mnemonicParsing="false" onAction="#handlePayOrder" prefHeight="25.0" prefWidth="115.0" text="Pay Order" />
+      <Button fx:id="payPenaltyButton" layoutX="306.0" layoutY="270.0" mnemonicParsing="false" onAction="#handlePayPenalty" prefHeight="25.0" prefWidth="115.0" text="Pay Penalty" />
+      <Button fx:id="refreshButton" layoutX="501.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.controllers.AddItemToBundleController">
+   <children>
+      <VBox layoutX="10.0" layoutY="14.0" prefHeight="596.0" prefWidth="528.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Add Item to Bundle" />
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Select Bundle:" />
+                  <ComboBox fx:id="bundleComboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Select Item" />
+                  <ComboBox fx:id="itemSelectedComboBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Quantity:" />
+                  <TextField fx:id="itemQuantityField" promptText="Enter Quantity" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Type:" />
+                  <ComboBox fx:id="itemTypeComboBox" prefWidth="150.0" /> <!-- Updated to ComboBox -->
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Button fx:id="addItemButton" onAction="#handleAddItemToBundle" text="Add Item" />
+                  <Button fx:id="clearButton" onAction="#handleClearFields" text="Clear" />
+                  <Button fx:id="refreshButton" onAction="#handleRefresh" text="Refresh" />
+               </children>
+            </HBox>
+            <Label text="Items in Bundle:" />
+            <ListView fx:id="itemsInBundleListView" prefHeight="200.0" prefWidth="465.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
+

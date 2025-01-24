@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPlane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.controllers.ModifyOrderController">
+   <children>
+      <ComboBox fx:id="orderNumberComboBox" layoutX="61.0" layoutY="14.0" onAction="#handleUpdateOrderSelection" prefHeight="26.0" prefWidth="66.0" />
+      <Button fx:id="refreshPageButton" layoutX="505.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh Page" />
+      <Label layoutX="12.0" layoutY="18.0" text="Order #" />
+      <TableView fx:id="orderItemTable" layoutX="14.0" layoutY="96.0" prefHeight="218.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+          <TableColumn fx:id="itemNameColumn" prefWidth="75.0" text="Item Name" />
+            <TableColumn fx:id="gradeBundleNameColumn" prefWidth="75.0" text="Grade Bundle" />
+            <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="discountDeductedColumn" prefWidth="75.0" text="Discount" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteItemButton" layoutX="457.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleDeleteItem" text="Delete Selected Item" />
+      <ComboBox fx:id="selectItemComboBox" layoutX="94.0" layoutY="319.0" prefWidth="150.0" />
+      <Button fx:id="updateItemButton" layoutX="454.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleUpdateItemInOrder" text="Update Selected Item" />
+      <TextField fx:id="quantityTextField" layoutX="84.0" layoutY="358.0" prefHeight="26.0" prefWidth="34.0" />
+      <Label layoutX="25.0" layoutY="362.0" text="Quantity:" />
+      <Label layoutX="19.0" layoutY="323.0" text="Item Name:" />
+      <Label layoutX="141.0" layoutY="18.0" text="Parent:" />
+      <Label layoutX="11.0" layoutY="68.0" text="Student:" />
+      <Label fx:id="parentEmail" layoutX="190.0" layoutY="17.0" prefHeight="18.0" prefWidth="150.0" />
+      <Label fx:id="studentName" layoutX="69.0" layoutY="68.0" prefHeight="18.0" prefWidth="173.0" />
+      <Label layoutX="15.0" layoutY="50.0" text="Status:" />
+      <Label layoutX="207.0" layoutY="50.0" text="Date Created:" />
+      <Label layoutX="247.0" layoutY="68.0" text="Price:" />
+      <Label layoutX="446.0" layoutY="50.0" text="Auth Code:" />
+      <Label layoutX="404.0" layoutY="68.0" text="Penalty Auth Code:" />
+      <Label fx:id="status" layoutX="69.0" layoutY="50.0" prefHeight="18.0" prefWidth="126.0" />
+      <Label fx:id="date" layoutX="301.0" layoutY="50.0" prefHeight="18.0" prefWidth="126.0" />
+      <Label fx:id="totalPrice" layoutX="295.0" layoutY="68.0" prefHeight="18.0" prefWidth="102.0" />
+      <Label fx:id="authCode" layoutX="520.0" layoutY="50.0" prefHeight="18.0" prefWidth="66.0" />
+      <Label fx:id="penAuthCode" layoutX="520.0" layoutY="68.0" prefHeight="18.0" prefWidth="73.0" />
+      <Label layoutX="349.0" layoutY="18.0" text="Level:" />
+      <Label fx:id="level" layoutX="390.0" layoutY="19.0" prefHeight="18.0" prefWidth="108.0" />
+      <Button fx:id="addItemButton" layoutX="145.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleAddItemToOrder" text="Add Item" />
+   </children>
+</AnchorPane>

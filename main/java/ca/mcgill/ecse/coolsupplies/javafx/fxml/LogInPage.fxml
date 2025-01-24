@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.coolsupplies.javafx.fxml.LogInPageController">
+    <children>
+        <VBox fx:id="vbox" alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <Label text="CoolSupplies Login Page" />
+                <Region prefHeight="50" />
+                <Label alignment="CENTER" text="Email:" />
+                <TextField fx:id="emailTextField" alignment="CENTER" maxWidth="400" prefWidth="300" promptText="Enter email here..." />
+                <Region prefHeight="20" />
+
+                <Label alignment="CENTER" text="Password:" />
+                <StackPane maxWidth="400">
+                    <PasswordField fx:id="passwordPasswordField" alignment="CENTER" maxWidth="400" prefWidth="300" promptText="Enter password here..." />
+                    <TextField fx:id="passwordTextField" alignment="CENTER" maxWidth="400" prefWidth="300" promptText="Enter password here..." visible="false" />
+                </StackPane>
+                <CheckBox fx:id="showPasswordCheckBox" onAction="#handleShowPassword" text="Show Password" />
+                <Region prefHeight="20" />
+
+                <Button fx:id="logInButton" mnemonicParsing="false" onAction="#handleLogInButtonPress" text="Login" />
+                <Label fx:id="errorMessageLabel" alignment="CENTER" />
+                <Button fx:id="hintButton" mnemonicParsing="false" onAction="#handleHintButtonPress" text="Hint" />
+                <Label fx:id="hintMessageLabel" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
